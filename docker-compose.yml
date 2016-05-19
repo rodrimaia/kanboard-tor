@@ -1,0 +1,10 @@
+tor:
+  image: goldy/tor-hidden-service
+  links:
+    - kanboard
+
+kanboard:
+  image: kanboard/kanboard
+  hostname: kanboard
+  volumes:
+    - ./keys:/var/lib/tor/hidden_service
